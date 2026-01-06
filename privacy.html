@@ -12,7 +12,7 @@
         }
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
+            line-height: 1.7;
             color: #333;
             background-color: #faf9f7;
             padding: 20px;
@@ -59,49 +59,92 @@
             border-left: 4px solid #d17359;
             margin: 20px 0;
         }
+        .highlight-info {
+            background: #f0f7ff;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #4a90d9;
+            margin: 20px 0;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Privacy Policy</h1>
-        <p class="last-updated">Last Updated: January 5, 2026</p>
+        <p class="last-updated">Last Updated: January 6, 2026</p>
 
         <div class="highlight">
-            <strong>Summary:</strong> GetBriefed stores all your data locally on your device. We do not collect, transmit, or store your personal information on external servers.
+            <strong>Summary:</strong> GetBriefed stores your data locally on your device and optionally syncs via iCloud. When you use AI-powered features, limited data is processed through our secure servers and Anthropic's Claude AI to provide intelligent suggestions. No data is retained after processing.
         </div>
 
         <h2>Introduction</h2>
         <p>GetBriefed ("we," "our," or "the app") is committed to protecting your privacy. This Privacy Policy explains how we handle information when you use our iOS application.</p>
 
-        <h2>Information We Collect</h2>
-        <p><strong>We do not collect personal information.</strong> GetBriefed is designed with privacy as a core principle:</p>
+        <h2>Data Storage</h2>
+        <p>Your data is stored in the following ways:</p>
         <ul>
-            <li><strong>Local Storage Only:</strong> All data you enter (contacts, facts, interactions, notes) is stored exclusively on your device using Apple's secure on-device storage.</li>
-            <li><strong>No Account Required:</strong> You do not need to create an account or provide any personal information to use GetBriefed.</li>
-            <li><strong>No Analytics:</strong> We do not use analytics or tracking tools to monitor your usage.</li>
-            <li><strong>No Third-Party Data Sharing:</strong> Your data is never shared with third parties.</li>
+            <li><strong>Local Storage:</strong> All data you enter (contacts, facts, interactions, notes) is stored on your device using Apple's secure SwiftData framework.</li>
+            <li><strong>iCloud Sync:</strong> If enabled, your data syncs across your devices via your personal iCloud account. This data is stored in your private iCloud container, encrypted by Apple. We do not have access to your iCloud data.</li>
+            <li><strong>Voice Recordings:</strong> Voice notes are stored locally on your device and are not uploaded to external servers. Only the transcribed text may be processed for AI features.</li>
         </ul>
 
         <h2>AI-Powered Features</h2>
-        <p>GetBriefed offers optional AI-powered features to generate conversation topics. When you use these features:</p>
+        <div class="highlight-info">
+            <strong>Important:</strong> When you use AI features, some data is transmitted to external services for processing.
+        </div>
+
+        <p>GetBriefed offers AI-powered features including:</p>
         <ul>
-            <li>Data is processed securely to generate suggestions.</li>
-            <li>We use industry-standard encryption for any data transmission.</li>
-            <li>No personal data is retained after processing.</li>
+            <li>Extracting facts from conversation notes</li>
+            <li>Generating personalized conversation topics</li>
         </ul>
 
-        <h2>iCloud Sync</h2>
-        <p>If you enable iCloud sync, your data may be stored in your personal iCloud account. This is governed by Apple's privacy policy and your iCloud settings. We do not have access to your iCloud data.</p>
+        <p><strong>What data is processed:</strong></p>
+        <ul>
+            <li>Contact names, company, and role</li>
+            <li>Facts you've recorded about contacts</li>
+            <li>Interaction notes and locations</li>
+            <li>Voice note transcriptions</li>
+        </ul>
+
+        <p><strong>How data is processed:</strong></p>
+        <ul>
+            <li>Data is sent securely (HTTPS) to our servers hosted on Vercel</li>
+            <li>Our servers forward the data to Anthropic's Claude AI for processing</li>
+            <li>AI-generated suggestions are returned to your device</li>
+            <li><strong>No data is stored or retained</strong> on our servers or by Anthropic after processing</li>
+        </ul>
+
+        <p><strong>Third-party AI provider:</strong> We use <a href="https://www.anthropic.com/privacy" target="_blank">Anthropic</a> to power our AI features. Anthropic processes data according to their privacy policy and does not use your data to train their models when accessed via their API.</p>
+
+        <h2>Data We Do NOT Collect</h2>
+        <ul>
+            <li><strong>No Account Required:</strong> You do not need to create an account or provide personal information to use GetBriefed.</li>
+            <li><strong>No Analytics:</strong> We do not use analytics or tracking tools to monitor your usage.</li>
+            <li><strong>No Advertising:</strong> We do not display ads or share data with advertisers.</li>
+            <li><strong>No Data Sales:</strong> We never sell your data to third parties.</li>
+        </ul>
 
         <h2>Notifications</h2>
-        <p>GetBriefed may send local notifications (such as birthday reminders) if you enable them. These notifications are generated entirely on your device and do not require any data transmission.</p>
+        <p>GetBriefed may send local notifications (such as birthday reminders or meeting briefings) if you enable them. These notifications are generated entirely on your device and do not require any data transmission.</p>
 
         <h2>Data Security</h2>
         <p>Your data is protected by:</p>
         <ul>
             <li>Apple's built-in device encryption</li>
             <li>Secure on-device storage (SwiftData)</li>
-            <li>No external server communication for core features</li>
+            <li>HTTPS encryption for all AI feature data transmission</li>
+            <li>iCloud encryption for synced data (managed by Apple)</li>
+        </ul>
+
+        <h2>Your Control Over Your Data</h2>
+        <p>You have complete control over your information:</p>
+        <ul>
+            <li><strong>Delete Individual Data:</strong> Remove any contact, fact, or interaction within the app</li>
+            <li><strong>Export Your Data:</strong> Export all your data as CSV files from Settings</li>
+            <li><strong>Delete All Data:</strong> Delete the app to remove all locally stored data</li>
+            <li><strong>Disable iCloud:</strong> Turn off iCloud sync in your device settings</li>
+            <li><strong>Avoid AI Features:</strong> You can use the app without AI features by not using the "Analyze" function</li>
         </ul>
 
         <h2>Children's Privacy</h2>
@@ -111,11 +154,8 @@
         <p>We may update this Privacy Policy from time to time. Any changes will be reflected on this page with an updated revision date.</p>
 
         <h2>Contact Us</h2>
-        <p>If you have questions about this Privacy Policy, please contact us at:</p>
-        <p><a href="mailto:getbriefed+mattalvaro82@gmail.com">getbriefed+mattalvaro82@gmail.com</a></p>
-
-        <h2>Your Rights</h2>
-        <p>Since all data is stored locally on your device, you have complete control over your information. You can delete all app data at any time by deleting the app from your device.</p>
+        <p>If you have questions about this Privacy Policy or how your data is handled, please contact us at:</p>
+        <p><a href="mailto:getbriefed+support@gmail.com">getbriefed+support@gmail.com</a></p>
     </div>
 </body>
 </html>
